@@ -74,8 +74,12 @@ module.exports = {
       72: "18rem",
       80: "20rem",
       96: "24rem",
+      100: "26rem",
+      108: "27rem",
       112: "28rem",
       128: "32rem",
+      130: "33rem",
+      134: "34rem",
       144: "36rem",
       160: "40rem",
       176: "44rem",
@@ -84,6 +88,7 @@ module.exports = {
       208: "52rem",
       216: "54rem",
       220: "55rem",
+      240: "68rem",
     },
     animation: {
       none: "none",
@@ -843,7 +848,7 @@ module.exports = {
 
     extend: {
       fontFamily: {
-        stolzl: "'stolzl', sans-serif",
+        stolzl: "'Stolzl', sans-serif",
         sphere: "'sphere', sans-serif",
       },
     },
