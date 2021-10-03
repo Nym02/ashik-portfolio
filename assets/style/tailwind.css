@@ -29,11 +29,6 @@
   @font-face {
     font-family: "Stolzl Book";
     src: url("../fonts/stolzl/Stolzl-Book.ttf");
-    src: local("Stolzl Book"), local("Stolzl-Book"),
-      url("Stolzl-Book.eot?#iefix") format("embedded-opentype"),
-      url("Stolzl-Book.woff2") format("woff2"),
-      url("Stolzl-Book.woff") format("woff"),
-      url("Stolzl-Book.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }

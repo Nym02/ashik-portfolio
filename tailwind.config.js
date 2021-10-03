@@ -20,6 +20,8 @@ module.exports = {
       accent: "#0D2D52",
       heighlight: "#F55C59",
       light: "#5682B3",
+      sky: "#37DBFF",
+      lightGreen: "#37FF6F",
 
       black: colors.black,
       white: colors.white,
@@ -850,6 +852,7 @@ module.exports = {
       fontFamily: {
         stolzl: "'Stolzl', sans-serif",
         sphere: "'sphere', sans-serif",
+        stolzlBook: "'Stolzl Book', sans-serif",
       },
     },
   },
