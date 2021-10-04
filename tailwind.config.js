@@ -23,6 +23,7 @@ module.exports = {
       light: "#5682B3",
       sky: "#37DBFF",
       lightGreen: "#37FF6F",
+      tabBorder: "#0E3A6C",
 
       black: colors.black,
       white: colors.white,
