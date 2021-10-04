@@ -852,7 +852,7 @@ module.exports = {
     extend: {
       fontFamily: {
         stolzl: "'Stolzl', sans-serif",
-        sphere: "'sphere', sans-serif",
+        sphere: "'sphere', noto sans",
         stolzlBook: "'Stolzl Book', sans-serif",
       },
     },
