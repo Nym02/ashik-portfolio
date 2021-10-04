@@ -19,6 +19,7 @@ module.exports = {
 
       main: "#092545",
       accent: "#0D2D52",
+      accetnLight: "#0D3B6D",
       heighlight: "#F55C59",
       light: "#5682B3",
       sky: "#37DBFF",
