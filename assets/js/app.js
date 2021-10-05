@@ -33,6 +33,15 @@ mainBar.addEventListener("click", (e) => {
   }
 });
 
+$(document).ready(function () {
+  $(".owl-carousel").owlCarousel({
+    items: 2,
+    nav: true,
+    loop: true,
+    dots: true,
+  });
+});
+
 // particle js implementation
 particlesJS("particles-js", {
   particles: {
