@@ -33,6 +33,40 @@ mainBar.addEventListener("click", (e) => {
   }
 });
 
+//tab
+
+const tabs = document.querySelectorAll(".tab-item");
+const contents = document.querySelectorAll(".tab-body");
+
+// console.log(tabs);
+
+// for (let i = 0; i < tabs.length; i++) {
+//   tabs[i].addEventListener("click", (e) => {
+//     tabs.forEach((tab) => {
+//       tab.classList.remove("bg-accent");
+//       tab.classList.remove("border-b");
+//       tab.classList.remove("border-heighlight");
+//     });
+
+//     tabs[i].classList.add("bg-accent");
+//     tabs[i].classList.add("border-b");
+//     tabs[i].classList.add("border-heighlight");
+
+//     contents.forEach((c) => {
+//       c.style.visibility = "hidden";
+//       c.style.opacity = "0";
+//       c.style.transform = "scale(0.5)";
+//     });
+
+//     contents[i].style.visibility = "visible";
+//     contents[i].style.opacity = "1";
+//     contents[i].style.transform = "scale(1)";
+//   });
+// }
+// tabs[0].click();
+
+//tab
+
 $(document).ready(function () {
   $(".owl-carousel").owlCarousel({
     items: 2,
