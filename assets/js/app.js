@@ -33,6 +33,19 @@ mainBar.addEventListener("click", (e) => {
   }
 });
 
+// show/hide sidebar
+const menu = document.querySelector(".menu");
+mainBar.addEventListener("click", (e) => {
+  if (menu.classList.contains("-left-full")) {
+    menu.classList.remove("-left-full");
+    menu.classList.add("left-0");
+  } else {
+    menu.classList.remove("left-0");
+    menu.classList.add("-left-full");
+  }
+});
+// show/hide sidebar
+
 //tab-big screen
 
 const bigTab = document.querySelectorAll(".big-tab-item");
@@ -109,6 +122,34 @@ $(document).ready(function () {
     dots: true,
   });
 });
+
+//add active class on nav item
+
+const item = document.querySelectorAll(".nav-item");
+
+item.forEach((b) => {
+  b.addEventListener("click", (e) => {
+    item.forEach((el) => el.classList.remove("font-bold"));
+    b.classList.add("font-bold");
+  });
+});
+item[0].click();
+
+//sticky menu
+function stickyElement(e) {
+  var navbar = document.querySelector(".navigation");
+  var scrollValue = window.scrollY;
+
+  if (scrollValue > 0) {
+    navbar.classList.add("fixed");
+    // navbar.classList.add("translate-y-0");
+  } else if (scrollValue < 0) {
+    navbar.classList.remove("fixed");
+    // navbar.classList.remove("translate-y-0");
+  }
+}
+
+window.addEventListener("scroll", stickyElement);
 
 // particle js implementation
 particlesJS("particles-js", {
