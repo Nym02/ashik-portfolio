@@ -33,6 +33,40 @@ mainBar.addEventListener("click", (e) => {
   }
 });
 
+//tab-big screen
+
+const bigTab = document.querySelectorAll(".big-tab-item");
+const bigContents = document.querySelectorAll(".big-tab-body");
+
+console.log(bigTab);
+
+for (let i = 0; i < bigTab.length; i++) {
+  bigTab[i].addEventListener("click", (e) => {
+    bigTab.forEach((tab) => {
+      tab.classList.remove("bg-accetnLight");
+      tab.classList.remove("border-r-2");
+      tab.classList.remove("border-heighlight");
+    });
+
+    bigTab[i].classList.add("bg-accetnLight");
+    bigTab[i].classList.add("border-r-2");
+    bigTab[i].classList.add("border-heighlight");
+
+    bigContents.forEach((c) => {
+      c.style.visibility = "hidden";
+      c.style.opacity = "0";
+      c.style.transform = "scale(0.95)";
+    });
+
+    bigContents[i].style.visibility = "visible";
+    bigContents[i].style.opacity = "1";
+    bigContents[i].style.transform = "scale(1)";
+  });
+}
+bigTab[0].click();
+
+//tab-big screen
+
 //tab
 
 const tabs = document.querySelectorAll(".tab-item");
@@ -40,30 +74,30 @@ const contents = document.querySelectorAll(".tab-body");
 
 // console.log(tabs);
 
-// for (let i = 0; i < tabs.length; i++) {
-//   tabs[i].addEventListener("click", (e) => {
-//     tabs.forEach((tab) => {
-//       tab.classList.remove("bg-accent");
-//       tab.classList.remove("border-b");
-//       tab.classList.remove("border-heighlight");
-//     });
+for (let i = 0; i < tabs.length; i++) {
+  tabs[i].addEventListener("click", (e) => {
+    tabs.forEach((tab) => {
+      tab.classList.remove("bg-accent");
+      tab.classList.remove("border-b");
+      tab.classList.remove("border-heighlight");
+    });
 
-//     tabs[i].classList.add("bg-accent");
-//     tabs[i].classList.add("border-b");
-//     tabs[i].classList.add("border-heighlight");
+    tabs[i].classList.add("bg-accent");
+    tabs[i].classList.add("border-b");
+    tabs[i].classList.add("border-heighlight");
 
-//     contents.forEach((c) => {
-//       c.style.visibility = "hidden";
-//       c.style.opacity = "0";
-//       c.style.transform = "scale(0.5)";
-//     });
+    contents.forEach((c) => {
+      c.style.visibility = "hidden";
+      c.style.opacity = "0";
+      c.style.transform = "scale(0.95)";
+    });
 
-//     contents[i].style.visibility = "visible";
-//     contents[i].style.opacity = "1";
-//     contents[i].style.transform = "scale(1)";
-//   });
-// }
-// tabs[0].click();
+    contents[i].style.visibility = "visible";
+    contents[i].style.opacity = "1";
+    contents[i].style.transform = "scale(1)";
+  });
+}
+tabs[0].click();
 
 //tab
 
