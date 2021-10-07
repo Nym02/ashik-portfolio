@@ -120,6 +120,8 @@ $(document).ready(function () {
     nav: true,
     loop: true,
     dots: true,
+    lazyLoad: true,
+    smartSpeed: 1000,
   });
 });
 
