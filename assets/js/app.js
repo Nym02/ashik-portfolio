@@ -127,15 +127,15 @@ $(document).ready(function () {
 
 //add active class on nav item
 
-const item = document.querySelectorAll(".nav-item");
+// const item = document.querySelectorAll(".nav-item");
 
-item.forEach((b) => {
-  b.addEventListener("click", (e) => {
-    item.forEach((el) => el.classList.remove("font-bold"));
-    b.classList.add("font-bold");
-  });
-});
-item[0].click();
+// item.forEach((b) => {
+//   b.addEventListener("click", (e) => {
+//     item.forEach((el) => el.classList.remove("font-bold"));
+//     b.classList.add("font-bold");
+//   });
+// });
+// item[0].click();
 
 //sticky menu
 function stickyElement(e) {
