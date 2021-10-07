@@ -93,11 +93,13 @@ for (let i = 0; i < tabs.length; i++) {
       tab.classList.remove("bg-accent");
       tab.classList.remove("border-b");
       tab.classList.remove("border-heighlight");
+      tab.classList.remove("font-bold");
     });
 
     tabs[i].classList.add("bg-accent");
     tabs[i].classList.add("border-b");
     tabs[i].classList.add("border-heighlight");
+    tabs[i].classList.add("font-bold");
 
     contents.forEach((c) => {
       c.style.visibility = "hidden";
