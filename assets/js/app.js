@@ -59,11 +59,13 @@ for (let i = 0; i < bigTab.length; i++) {
       tab.classList.remove("bg-accetnLight");
       tab.classList.remove("border-r-2");
       tab.classList.remove("border-heighlight");
+      tab.classList.remove("font-bold");
     });
 
     bigTab[i].classList.add("bg-accetnLight");
     bigTab[i].classList.add("border-r-2");
     bigTab[i].classList.add("border-heighlight");
+    bigTab[i].classList.add("font-bold");
 
     bigContents.forEach((c) => {
       c.style.visibility = "hidden";
