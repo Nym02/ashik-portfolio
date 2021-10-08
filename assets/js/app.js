@@ -1,37 +1,37 @@
 const bars = document.querySelectorAll("#first-bar");
 const mainBar = document.querySelector("#main-bar");
 
-mainBar.addEventListener("click", (e) => {
-  if (mainBar.classList.contains("cc")) {
-    for (let i = 0; i < bars.length; i++) {
-      if (i == 0) {
-        bars[i].style.transform = "rotate(45deg) translateY(14px)";
-      }
-      if (i == 1) {
-        bars[i].style.transform = "rotate(0) translateX(100px)";
-        bars[i].style.opacity = "0";
-      }
-      if (i == bars.length - 1) {
-        bars[i].style.transform = "rotate(-45deg) translateY(-14px)";
-      }
-    }
-    mainBar.classList.remove("cc");
-  } else {
-    for (let i = 0; i < bars.length; i++) {
-      if (i == 0) {
-        bars[i].style.transform = "rotate(0deg) translateY(0px)";
-      }
-      if (i == 1) {
-        bars[i].style.transform = "translateX(0px)";
-        bars[i].style.opacity = "1";
-      }
-      if (i == bars.length - 1) {
-        bars[i].style.transform = "rotate(0deg) translateY(0px)";
-      }
-    }
-    mainBar.classList.add("cc");
-  }
-});
+// mainBar.addEventListener("click", (e) => {
+//   if (mainBar.classList.contains("cc")) {
+//     for (let i = 0; i < bars.length; i++) {
+//       if (i == 0) {
+//         bars[i].style.transform = "rotate(45deg) translateY(14px)";
+//       }
+//       if (i == 1) {
+//         bars[i].style.transform = "rotate(0) translateX(100px)";
+//         bars[i].style.opacity = "0";
+//       }
+//       if (i == bars.length - 1) {
+//         bars[i].style.transform = "rotate(-45deg) translateY(-14px)";
+//       }
+//     }
+//     mainBar.classList.remove("cc");
+//   } else {
+//     for (let i = 0; i < bars.length; i++) {
+//       if (i == 0) {
+//         bars[i].style.transform = "rotate(0deg) translateY(0px)";
+//       }
+//       if (i == 1) {
+//         bars[i].style.transform = "translateX(0px)";
+//         bars[i].style.opacity = "1";
+//       }
+//       if (i == bars.length - 1) {
+//         bars[i].style.transform = "rotate(0deg) translateY(0px)";
+//       }
+//     }
+//     mainBar.classList.add("cc");
+//   }
+// });
 
 // show/hide sidebar
 const menu = document.querySelector(".menu");
@@ -45,6 +45,17 @@ mainBar.addEventListener("click", (e) => {
   }
 });
 // show/hide sidebar
+
+// close side bar on mobile menu
+const sidebarClose = document.querySelector(".sidebarClose");
+sidebarClose.addEventListener("click", (e) => {
+  if (menu.classList.contains("left-0")) {
+    menu.classList.remove("left-0");
+    menu.classList.add("-left-full");
+  }
+});
+
+// close side bar on mobile menu
 
 //tab-big screen
 
@@ -135,15 +146,24 @@ $(document).ready(function () {
 
 //add active class on nav item
 
-// const item = document.querySelectorAll(".nav-item");
+const item = document.querySelectorAll(".nav-item");
+const itemSmall = document.querySelectorAll(".nav-item-small");
 
-// item.forEach((b) => {
-//   b.addEventListener("click", (e) => {
-//     item.forEach((el) => el.classList.remove("font-bold"));
-//     b.classList.add("font-bold");
-//   });
-// });
-// item[0].click();
+item.forEach((b) => {
+  b.addEventListener("click", (e) => {
+    item.forEach((el) => el.classList.remove("font-bold"));
+    b.classList.add("font-bold");
+  });
+});
+item[0].click();
+
+itemSmall.forEach((b) => {
+  b.addEventListener("click", (e) => {
+    itemSmall.forEach((el) => el.classList.remove("font-bold"));
+    b.classList.add("font-bold");
+  });
+});
+itemSmall[0].click();
 
 // scroll animation
 AOS.init({
