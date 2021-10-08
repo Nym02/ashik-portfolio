@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
 
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
   <link rel="stylesheet" href="./assets/style/main.css" />
@@ -133,20 +134,27 @@
 <body class="text-white font-stolzl relative">
 
   <!-- mobile menu  -->
-  <div class="menu bg-white w-56 h-screen fixed top-0 -left-full z-10 transition-all duration-200">
-    <div>
-      <a href="#me">
-        <svg width="80" height="39" viewBox="0 0 80 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="19.5001" cy="19.5004" r="9.19811" fill="#F55C59" />
-          <circle cx="59.9718" cy="19.5004" r="9.19811" fill="#F55C59" />
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M41.5607 26.5864C41.5566 26.6131 41.5618 26.6404 41.5755 26.6637L42.8313 28.8061C46.1353 34.8786 52.5722 39 59.9717 39C70.7413 39 79.4717 30.2696 79.4717 19.5C79.4717 8.73045 70.7413 0 59.9717 0C50.8472 0 43.1864 6.26706 41.0589 14.7315C40.8878 15.4125 39.9178 15.5915 39.5583 14.9883C38.4427 13.1169 37.4244 11.4984 36.8678 10.6246C33.638 4.31713 27.0732 0 19.5 0C8.73045 0 0 8.73045 0 19.5C0 30.2696 8.73045 39 19.5 39C25.1946 39 30.319 36.559 33.8841 32.6663C34.3663 32.1398 35.3208 32.4645 35.3208 33.1785V38.2641C35.3208 38.6705 35.6502 39 36.0566 39H37.5283C38.7475 39 39.7359 38.0117 39.7359 36.7924V30.0472C39.7359 29.888 39.6842 29.733 39.5887 29.6057L35.399 22.4895C34.4477 22.0024 34.0605 23.5083 33.8666 24.1127C31.9177 30.1877 26.2223 34.5849 19.5 34.5849C11.1688 34.5849 4.41509 27.8312 4.41509 19.5C4.41509 11.1688 11.1688 4.41509 19.5 4.41509C24.7015 4.41509 29.288 7.04768 32 11.0531C32.0029 11.0573 32.0094 11.0553 32.0094 11.0502C32.0094 11.0457 32.0136 11.0421 32.0166 11.0455C32.2329 11.2854 33.8686 13.9208 35.5045 16.5562L35.5046 16.5564L35.5049 16.5569L35.5051 16.5571C37.046 19.0398 38.5869 21.5223 38.9412 22.0024C38.9787 22.0533 39.0162 22.1031 39.048 22.1577L41.5751 26.49L41.5754 26.4906L41.5607 26.5864ZM75.0566 19.5C75.0566 27.8312 68.3029 34.5849 59.9717 34.5849C51.6405 34.5849 44.8868 27.8312 44.8868 19.5C44.8868 11.1688 51.6405 4.41509 59.9717 4.41509C68.3029 4.41509 75.0566 11.1688 75.0566 19.5Z"
-            fill="white" />
-          <path d="M41.2075 6.5684C41.2075 7.27319 42.1028 7.57477 42.5292 7.01365L45.4726 3.14076C45.57 3.01272 45.6226 2.85633 45.6226 2.69551V1.4717C45.6226 1.0653 45.2932 0.735849 44.8868 0.735849H43.4151C42.1959 0.735849 41.2075 1.7242 41.2075 2.9434V6.5684Z" fill="white" />
-          <path d="M45.6226 36.9628C45.6226 36.802 45.57 36.6456 45.4726 36.5176L42.5292 32.6447C42.1028 32.0835 41.2075 32.3851 41.2075 33.0899V36.7925C41.2075 38.0117 42.1959 39 43.4151 39H44.8868C45.2932 39 45.6226 38.6705 45.6226 38.2641V36.9628Z" fill="white" />
-        </svg>
+  <div style="z-index: 9999999;" class="menu bg-main w-full h-screen fixed top-0 -left-full z-10 transition-all duration-200">
+    <div class="relative">
+      <svg class="absolute top-4 cursor-pointer right-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0)">
+          <path d="M4.92912 4.70711C5.11666 4.51957 5.37101 4.41421 5.63623 4.41421C5.90145 4.41421 6.1558 4.51957 6.34334 4.70711L19.0713 17.435C19.2588 17.6226 19.3642 17.8769 19.3642 18.1421C19.3642 18.4074 19.2588 18.6617 19.0713 18.8492C18.8837 19.0368 18.6294 19.1421 18.3642 19.1421C18.0989 19.1421 17.8446 19.0368 17.657 18.8492L4.92912 6.12132C4.74159 5.93378 4.63623 5.67943 4.63623 5.41421C4.63623 5.149 4.74159 4.89464 4.92912 4.70711Z" fill="white" />
+          <path d="M4.92903 17.435C4.74149 17.6225 4.63614 17.8769 4.63614 18.1421C4.63614 18.4073 4.74149 18.6617 4.92903 18.8492C5.11657 19.0367 5.37092 19.1421 5.63614 19.1421C5.90135 19.1421 6.15571 19.0367 6.34324 18.8492L19.0712 6.12127C19.2587 5.93374 19.3641 5.67938 19.3641 5.41417C19.3641 5.14895 19.2587 4.8946 19.0712 4.70706C18.8836 4.51952 18.6293 4.41417 18.3641 4.41417C18.0988 4.41417 17.8445 4.51952 17.657 4.70706L4.92903 17.435Z" fill="white" />
+        </g>
+        <defs>
+          <clipPath id="clip0">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
 
-      </a>
+    </div>
+    <div>
+      <div>
+        <ul>
+          <li><a href="#" class="inline-block text-2xl">It's Me</a></li>
+        </ul>
+      </div>
     </div>
   </div>
   <!-- mobile menu  -->
@@ -419,7 +427,7 @@
           <!-- skills  -->
           <div class="lg:grid lg:grid-cols-3 lg:gap-4">
             <!-- skill item 1 -->
-            <div class="sm:max-w-md lg:max-w-full sm:mx-auto lg:mx-0 px-4 pt-20 mt-3 border-t-8 rounded-md bg-accent border-lightGreen transform hover:rotate-1 transition-all duration-300">
+            <div data-aos="fade-right" class="sm:max-w-md lg:max-w-full sm:mx-auto lg:mx-0 px-4 pt-20 mt-3 border-t-8 rounded-md bg-accent border-lightGreen transform hover:rotate-1 transition-all duration-300">
               <div class="flex items-center justify-center w-full space-x-4 xs:space-x-7">
                 <div>
                   <svg class="w-12 xs:w-16" height="auto" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -453,7 +461,7 @@
             </div>
             <!-- skill item 1-->
             <!-- skill item 2 -->
-            <div class="sm:max-w-md lg:max-w-full sm:mx-auto lg:mx-0 px-4 pt-20 mt-3 transition-all duration-300 transform border-t-8 rounded-md bg-accent hover:translate-y-1 border-heighlight">
+            <div data-aos="fade-up" class="sm:max-w-md lg:max-w-full sm:mx-auto lg:mx-0 px-4 pt-20 mt-3 transition-all duration-300 transform border-t-8 rounded-md bg-accent hover:translate-y-1 border-heighlight">
               <div class="flex items-center justify-center w-full space-x-4 xs:space-x-7">
                 <div>
                   <svg class="w-12 xs:w-16" height="auto" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -484,7 +492,7 @@
             </div>
             <!-- skill item 2-->
             <!-- skill item 3 -->
-            <div class="sm:max-w-md lg:max-w-full sm:mx-auto lg:mx-0 px-4 pt-20 mt-3 transition-all duration-300 transform border-t-8 rounded-md bg-accent hover:-rotate-1 border-sky">
+            <div data-aos="fade-left" class="sm:max-w-md lg:max-w-full sm:mx-auto lg:mx-0 px-4 pt-20 mt-3 transition-all duration-300 transform border-t-8 rounded-md bg-accent hover:-rotate-1 border-sky">
               <div class="flex items-center justify-center w-full space-x-4 xs:space-x-7">
                 <div>
                   <svg class="w-10 xs:w-16" height="auto" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -545,7 +553,7 @@
           <!-- Working Hours Details  -->
           <div class="lg:grid lg:grid-cols-2 xl:grid-cols-4 lg:gap-4 lg:place-items-center">
             <!-- item 1 -->
-            <div class="text-center lg:text-left lg:px-10 bg-main max-w-md lg:max-w-full lg:w-full  mx-auto lg:mx-0 py-10 rounded-md mb-4">
+            <div data-aos="fade-right" class="text-center lg:text-left lg:px-10 bg-main max-w-md lg:max-w-full lg:w-full  mx-auto lg:mx-0 py-10 rounded-md mb-4">
               <div>
                 <svg class="inline-block w-10 xs:w-12 sm:w-16 lg:w-10" height="auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.1213 3.33331C8.91626 3.33331 1.45459 10.795 1.45459 20C1.45459 29.205 8.91626 36.6666 18.1213 36.6666C27.3263 36.6666 34.7879 29.205 34.7879 20C34.7879 10.795 27.3263 3.33331 18.1213 3.33331Z" stroke="#5682B3" stroke-width="2.90909" stroke-linecap="round" stroke-linejoin="round" />
@@ -562,7 +570,7 @@
             </div>
             <!-- item 1 -->
             <!-- item 2-->
-            <div class="text-center lg:text-left lg:px-8 bg-main max-w-md lg:max-w-full lg:w-full mx-auto lg:mx-0 py-10 rounded-md mb-4">
+            <div data-aos="fade-up" class="text-center lg:text-left lg:px-8 bg-main max-w-md lg:max-w-full lg:w-full mx-auto lg:mx-0 py-10 rounded-md mb-4">
               <div>
                 <svg class="inline-block w-7 xs:w-10 sm:w-12 lg:w-7" height="auto" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M22.6263 0.818176H4.24242C2.53697 0.818176 0 1.9513 0 5.07272V24.9273C0 28.0487 2.53697 29.1818 4.24242 29.1818H25.4545V26.3454H4.25939C3.60606 26.3284 2.82828 26.0689 2.82828 24.9273C2.82828 24.784 2.84101 24.6564 2.86222 24.5401C3.02061 23.7246 3.68667 23.5233 4.25798 23.5091H24.0404C24.0659 23.5091 24.0842 23.4963 24.1097 23.4949H25.4545V3.65454C25.4545 2.09029 24.1861 0.818176 22.6263 0.818176ZM22.6263 20.6727H2.82828V5.07272C2.82828 3.92967 3.60606 3.67156 4.24242 3.65454H14.1414V13.5818L16.9697 12.1636L19.798 13.5818V3.65454H22.6263V20.6727Z" fill="#5682B3" />
@@ -578,7 +586,7 @@
             </div>
             <!-- item 2-->
             <!-- item 3-->
-            <div class="text-center lg:text-left lg:px-8 bg-main max-w-md lg:max-w-full lg:w-full mx-auto lg:mx-0 py-10 rounded-md mb-4">
+            <div data-aos="fade-down" class="text-center lg:text-left lg:px-8 bg-main max-w-md lg:max-w-full lg:w-full mx-auto lg:mx-0 py-10 rounded-md mb-4">
               <div>
                 <svg class="inline-block w-8 xs:w-10 sm:w-12 lg:w-8" height="auto" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M30.5455 0.818237H0V10.0048H1.52727V26.8469C1.52727 27.6591 1.84909 28.438 2.42193 29.0122C2.99477 29.5865 3.7717 29.9091 4.58182 29.9091H25.9636C26.7738 29.9091 27.5507 29.5865 28.1235 29.0122C28.6964 28.438 29.0182 27.6591 29.0182 26.8469V10.0048H30.5455V0.818237ZM3.05455 3.88044H27.4909V6.94264H3.05455V3.88044ZM25.9636 26.8469H4.58182V10.0048H25.9636V26.8469ZM10.6909 13.067H19.8545C19.8545 13.8792 19.5327 14.6581 18.9599 15.2323C18.3871 15.8066 17.6101 16.1292 16.8 16.1292H13.7455C12.9353 16.1292 12.1584 15.8066 11.5856 15.2323C11.0127 14.6581 10.6909 13.8792 10.6909 13.067Z" fill="#5682B3" />
@@ -595,7 +603,7 @@
             </div>
             <!-- item 3-->
             <!-- item 4-->
-            <div class="text-center lg:text-left lg:px-8 bg-main max-w-md lg:max-w-full lg:w-full mx-auto lg:mx-0 py-10 rounded-md mb-4">
+            <div data-aos="fade-left" class="text-center lg:text-left lg:px-8 bg-main max-w-md lg:max-w-full lg:w-full mx-auto lg:mx-0 py-10 rounded-md mb-4">
               <div>
                 <svg class="inline-block w-8 xs:w-10 sm:w-12 lg:w-8" height="auto" viewBox="0 0 29 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -836,7 +844,7 @@
               <div class="container mx-auto hidden lg:block">
                 <div class="tab-bodyy bg-main transform  transition-all duration-300 h-full w-full">
                   <div class=" lg:grid lg:grid-cols-4 space-x-2 h-full">
-                    <div class="border-r border-light">
+                    <div data-aos="fade-right" class="border-r border-light">
                       <div>
                         <ul class="text-right ">
                           <li class=""><button class="big-tab-item w-full text-right py-3  px-5 ">Techmantle
@@ -849,10 +857,7 @@
                     </div>
                     <div class=" col-span-3 relative">
                       <div class="big-tab-body w-full h-full flex space-x-2">
-
-
-
-                        <div class="bg-accent rounded-md py-6 px-8 h-full" style="flex: 2">
+                        <div data-aos="fade-up" class="bg-accent rounded-md py-6 px-8 h-full" style="flex: 2">
                           <div class="">
                             <div>
                               <h1 class="font-bold text-xl xs:text-2xl">Lead UI/UX Designer</h1>
@@ -895,7 +900,7 @@
                         </div>
 
 
-                        <div class="flex-1">
+                        <div data-aos="fade-left" class="flex-1">
 
                           <div class="bg-accent px-4 py-7 rounded-md w-full text-center mb-2">
                             <div class="text-7xl font-bold">6<span class="text-base font-normal">Years</span></div>
@@ -1132,7 +1137,7 @@
           <!-- projects  -->
           <div class="lg:grid lg:grid-cols-3 xl:grid-cols-3 lg:gap-4 lg:place-items-center mt-16">
             <!-- project 1  -->
-            <div class="bg-main rounded-md overflow-hidden max-w-md lg:max-w-full mx-auto lg:mx-0 lg:w-full mb-4 lg:mb-0">
+            <div data-aos="fade-down-right" class="bg-main rounded-md overflow-hidden max-w-md lg:max-w-full mx-auto lg:mx-0 lg:w-full mb-4 lg:mb-0">
               <div class="overflow-hidden">
                 <a href="#">
 
@@ -1162,7 +1167,7 @@
             </div>
             <!-- project 1  -->
             <!-- project 2  -->
-            <div class="bg-main rounded-md overflow-hidden max-w-md lg:max-w-full mx-auto lg:mx-0 lg:w-full mb-4 lg:mb-0">
+            <div data-aos="fade-up" class="bg-main rounded-md overflow-hidden max-w-md lg:max-w-full mx-auto lg:mx-0 lg:w-full mb-4 lg:mb-0">
               <div class="overflow-hidden">
                 <a href="#">
                   <img class="w-full object-cover transform transition-all duration-300 scale-100 hover:scale-105" src="./images/project4.png" alt="">
@@ -1189,7 +1194,7 @@
             </div>
             <!-- project 2  -->
             <!-- project 3  -->
-            <div class="bg-main overflow-hidden rounded-md max-w-md lg:max-w-full mx-auto lg:mx-0 lg:w-full mb-4 lg:mb-0">
+            <div data-aos="fade-down-left" class="bg-main overflow-hidden rounded-md max-w-md lg:max-w-full mx-auto lg:mx-0 lg:w-full mb-4 lg:mb-0">
               <div class="overflow-hidden">
                 <a href="#"><img class="w-full object-cover transform transition-all duration-300 scale-100 hover:scale-105" src="./images/project3.png" alt=""></a>
               </div>
@@ -1215,7 +1220,7 @@
             </div>
             <!-- project 3  -->
             <!-- project 4  -->
-            <div class="bg-main rounded-md overflow-hidden max-w-md lg:max-w-full mx-auto lg:mx-0 lg:w-full mb-4 lg:mb-0">
+            <div data-aos="fade-up-right" class="bg-main rounded-md overflow-hidden max-w-md lg:max-w-full mx-auto lg:mx-0 lg:w-full mb-4 lg:mb-0">
               <div class="overflow-hidden">
                 <a href="#">
 
@@ -1244,7 +1249,7 @@
             </div>
             <!-- project 4  -->
             <!-- project 5  -->
-            <div class="bg-main overflow-hidden max-w-md lg:max-w-full mx-auto lg:mx-0 lg:w-full mb-4 lg:mb-0 hidden lg:block">
+            <div data-aos="fade-up" class="bg-main overflow-hidden max-w-md lg:max-w-full mx-auto lg:mx-0 lg:w-full mb-4 lg:mb-0 hidden lg:block">
               <div class="overflow-hidden">
                 <a href="#">
 
@@ -1273,7 +1278,7 @@
             </div>
             <!-- project 5  -->
             <!-- project 6  -->
-            <div class="bg-main overflow-hidden max-w-md lg:max-w-full mx-auto lg:mx-0 lg:w-full mb-4 lg:mb-0 hidden lg:block">
+            <div data-aos="fade-up-left" class="bg-main overflow-hidden max-w-md lg:max-w-full mx-auto lg:mx-0 lg:w-full mb-4 lg:mb-0 hidden lg:block">
               <div class="overflow-hidden">
                 <a href="#">
 
@@ -1441,7 +1446,7 @@
 
             <div class="owl-carousel">
 
-              <div>
+              <div data-aos="fade-right">
                 <div class="bg-accent px-8 py-4 rounded-md ml-4 mx-auto  mb-3">
                   <!-- testimonial provider info  -->
                   <div class="w-full flex space-x-3 items-center pt-2">
@@ -1489,7 +1494,7 @@
               </div>
 
 
-              <div>
+              <div data-aos="fade-left">
                 <div class="bg-accent px-8 py-4 rounded-md ml-4 mx-auto  mb-3">
                   <!-- testimonial provider info  -->
                   <div class="w-full flex space-x-3 items-center pt-2">
@@ -1767,6 +1772,7 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 
   <script src="./assets/js/counterPlugin/counter.js"></script>

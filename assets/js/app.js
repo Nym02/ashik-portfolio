@@ -143,6 +143,12 @@ $(document).ready(function () {
 // });
 // item[0].click();
 
+// scroll animation
+AOS.init({
+  duration: 1000,
+});
+// scroll animation
+
 //sticky menu
 function stickyElement(e) {
   var navbar = document.querySelector(".navigation");
